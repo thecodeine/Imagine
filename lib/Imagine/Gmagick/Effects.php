@@ -89,12 +89,4 @@ class Effects implements EffectsInterface
     {
         throw new RuntimeException('Gmagick does not support sharpen yet');
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function removeTransparency(Color $backgroundColor)
-    {
-        throw new RuntimeException('Gmagick does not support sharpen yet');
-    }
 }

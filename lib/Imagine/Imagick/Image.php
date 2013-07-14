@@ -530,6 +530,17 @@ final class Image implements ImageInterface
     /**
      * {@inheritdoc}
      */
+    public function removeTransparency(Color $backgroundColor)
+    {
+        $this->imagick->setBackgroundColor((string) $backgroundColor);
+        $this->flatten();
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function fill(FillInterface $fill)
     {
         try {
