@@ -66,4 +66,11 @@ interface EffectsInterface
      * @throws RuntimeException
      */
     public function sharpen();
+
+    /**
+     * Remove transparency layer and replace it with background color
+     *
+     * @param Color $backgroundColor
+     */
+    public function removeTransparency(Color $backgroundColor);
 }

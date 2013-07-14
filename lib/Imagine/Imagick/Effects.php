@@ -96,4 +96,15 @@ class Effects implements EffectsInterface
 
         return $this;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function removeTransparency(Color $backgroundColor)
+    {
+        $this->imagick->setBackgroundColor((string) $backgroundColor);
+        $this->imagick = $this->imagick->flattenImages();
+
+        return $this;
+    }
 }
